@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="league">
+<head>
+	<meta charset="UTF-8">
+	<title>App Test</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="animate.css">
+	<script src="jquery.js"></script>
+	<script src="angular.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<h1 id="heading">Matchday</h1>
+	<div id="content" ng-controller="LeagueController as league">
+		<div ng-repeat="game in league.games.matches">
+			{{game.match_localteam_name + " " + game.match_localteam_score + " : " + game.match_visitorteam_score + " " + game.match_visitorteam_name}}
+		</div>
+	</div>
+
+<script>
+	$('#heading').append(" " + matchdayNumber);
+</script>
+</body>
+</html>
